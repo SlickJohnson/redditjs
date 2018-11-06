@@ -1,0 +1,24 @@
+{
+  "name": "redditjs",
+  "version": "1.0.0",
+  "description": "Reddit clone",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlickJohnson/redditjs.git"
+  },
+  "keywords": [
+    "reddit",
+    "node",
+    "js"
+  ],
+  "author": "willie johnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlickJohnson/redditjs/issues"
+  },
+  "homepage": "https://github.com/SlickJohnson/redditjs#readme"
+}
