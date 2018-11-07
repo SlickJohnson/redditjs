@@ -13,4 +13,11 @@ module.exports = app => {
     const post = new Post(req.body);
     post.save((err, post) => res.redirect(`/`));
   });
+
+  // SHOW
+  app.get('/posts/:id', (req, res) => {
+    Post.findById(req.params.id)
+      .then(post => res.render('posts-show', { post }))
+      .catch(err => console.log(err.message));
+  });
 };
