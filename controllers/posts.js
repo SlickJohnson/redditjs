@@ -9,9 +9,14 @@ module.exports = app => {
   });
 
   // CREATE
-  app.post('/posts/new', (req, res) => {
+  app.post('/posts', (req, res) => {
     const post = new Post(req.body);
     post.save((err, post) => res.redirect(`/`));
+  });
+
+  // NEW
+  app.get('/posts/new', (req, res) => {
+    res.render('posts-new', {});
   });
 
   // SHOW
