@@ -19,5 +19,6 @@ app.use(expressValidator());
 app.listen(port, () => console.log(`Listening to port ${port}!`));
 
 require('./controllers/posts.js')(app);
+require('./controllers/comments-controller.js')(app);
 
 require('./data/reddit-db');
