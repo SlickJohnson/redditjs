@@ -25,4 +25,15 @@ module.exports = app => {
       .then(post => res.render('posts-show', { post }))
       .catch(err => console.log(err.message));
   });
+
+  // SUBREDDIT
+  app.get('/n/:subreddit', (req, res) => {
+    Post.find({ subreddit: req.params.subreddit })
+      .then(posts => {
+        res.render('posts-index', { posts });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
 };
